@@ -1,0 +1,348 @@
+/* */
+
+/* Acessórios */
+/* Colocando mouseover */
+button:hover{
+    cursor: pointer;
+}
+
+
+/* !!!CABEÇALHO!!!  */
+#logo{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* pra mudar apenas com STU Motors e o Menu*/
+header h1{
+    padding-left: 13%;
+    margin-top: 1%;
+}
+
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1px;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+header button {
+    margin-right: 13%;
+    margin-top: 1.5%;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    max-height: 30px;
+    max-width: 50px;
+    justify-content: center;
+}
+    
+
+
+/* Mexendo no botão do cabeçalho
+
+header button{
+    margin-right: 150px;
+    max-height: 30px;
+    max-width: 50px;
+    justify-content: center;
+}
+*/
+
+/* Menu de Navegação */
+header nav {
+    background-color: #4b4141;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 6px;
+    display: none;
+}
+
+nav a{
+    color: rgb(236, 229, 229);
+    text-decoration: none;
+    margin-left: 13%;
+}
+
+/* Imagem que fica rodando embaixo do cabeçalho */
+#carrossel img{
+    width: 100%;
+    max-height: 350px;
+    position: relative;
+    object-fit: cover;
+    overflow-y: hidden;
+}
+
+/*------------------------------------------------------------*/
+
+/* Body como um todo */
+
+body{
+    background-color: rgba(189, 183, 183, 0.527);
+}
+
+/* SESSÕES */
+
+/* Posso mexer no tamanho das duas sessões inteiras, assim mantendo o padrão */
+section {
+    max-width: 87.5%;
+    margin: auto;
+    text-align: left;
+    padding-left: 70px;
+    padding-right: 70px;
+    border: 4px transparent black;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 50px;
+}
+
+
+
+/* Mexo apenas na caixa de apresentação */
+#apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px transparent rgb(247, 0, 0);
+}
+
+/*------------------------------------------------------------/*
+
+/* SOBRE A MARCA */
+
+/* Mexo na imagem da apresentação */
+#sobreAMarca img {
+    border: 5px transparent black;
+    height: 250px;
+    padding-top: 20px;
+    float: left;
+    padding-right: 20px;
+}
+/* Mexo na caixa como um todo */
+#sobreAMarca {
+    padding-top: 20px;
+    text-align: left;
+}
+
+/* h2 Sobre a STU Motors */
+#sobreSTU {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Texto dentro da STU Motors */
+#texto {
+    font-size: 22px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*------------------------------------------------------------/*
+
+/* EM DESTAQUE */
+
+/* Trabalhando no H2*/
+h2 {
+    padding-bottom: 5px;
+}
+
+/* Seleciono a div "anuncios, que engloba as outras 3, e faço
+ser uma em seguida da outra de forma linear*/
+#destaques{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* A div que trata das imagens dos anuncios em destaque */
+.todosOsAnuncios img{
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    max-height: 200px;
+    position: relative;
+    object-fit: cover;
+    overflow-y: hidden;
+}
+
+/* Botões de interesse */
+#tenhoInteresse{
+    background: radial-gradient(circle, #6b616186, #555555);
+    color: white;
+    font-size: 18px;
+    border-radius: 10px; /* Bordas redondas */
+    width: 100%; /* Ocupar a largura total da div */
+    padding: 10px; /* Adicione algum preenchimento para melhorar a aparência */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#tenhoInteresse:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/*------------------------------------------------------------/*
+/* Formulário de envio */
+form {
+    flex-direction: column;
+    display: flex;
+    max-width: 310px;
+    text-align: left;
+}
+
+form div{
+    flex-direction: column;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+form input{
+    height: 25px;
+}
+
+form button{
+    background: radial-gradient(circle, #6b616186, #555555);
+    color: white;
+    font-size: 18px;
+    border-radius: 10px; /* Bordas redondas */
+    width: 45%; /* Ocupar a largura total da div */
+    padding: 10px; /* Adicione algum preenchimento para melhorar a aparência */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+form text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contato > div::before {
+    content: attr(data-label);
+    font-weight: bold; /* Adiciona negrito */
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contato div {
+    margin-bottom: 15px;
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#despedida {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinhar itens ao topo */
+}
+
+/* Maps */
+#contato {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Maps */
+.maps {
+    position: relative;
+    padding-left: 100px;
+    width: 50%;
+    height: 0;
+    padding-bottom: 75%;
+}
+
+.maps iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+
+/* Botões redes sociais */
+/*
+.redessociais a{
+    display: inline;
+
+}
+
+
+.botaofacebook {
+    background-image: url('./Rede_Sociais/facebook.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+    color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 27%;
+    height: 45px;
+}
+
+.botaofacebook i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.botaoinsta {
+    background-image: url('./Rede_Sociais/instagram.png');
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+    color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+}
+
+.botaoinsta i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+*/
+
+/* */
+/*
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#caixa1 {
+    text-align: left;
+}
+
+#caixa1 img{
+
+}
+
+#texto {
+    text-align: justify;
+}
+*/
