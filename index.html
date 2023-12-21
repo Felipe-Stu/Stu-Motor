@@ -8,12 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
     <header>
         <div id="logo">
             <h1>STU Motors</h1>
-            <button type="button" id="menu">MENU</button>
+            <div class="menu-icon" id="menuIcon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
             <nav id="navegacao">
                 <a href="#sobreAMarca">SOBRE</a>
@@ -21,11 +27,13 @@
                 <a href="#promocao">PROMOÇÕES</a>
                 <a href="#contato">CONTATO</a>
             </nav>
-        <div id="carrossel">
-            <img src="Fotos/Apresentação/Carro chuva.jpg">
-        </div>
-    </header>
-    <main>
+        </header>
+        <main>
+            <div id="carrossel">
+                <img src="Fotos/Apresentação/Carro chuva.jpg" alt="Carro na chuva">
+                <img src="Fotos/Apresentação/Carro fundo montanhoso.jpg" alt="Carro Fundo Montanha">
+                <img src="Fotos/Apresentação/Carro Laranja.jpg" alt="Carro Laranja">
+            </div>
         <section id="apresentacao">
             <div id="sobreAMarca">
                 <img src="Fotos/Apresentação/Carros em fileira.jpg">
@@ -49,21 +57,21 @@
                     <h3>Carro BMW</h3>
                     <p>Pouca quilometragem</p>
                     <h3>R$ 75.000,00</h3>
-                    <button type="button" id="tenhoInteresse">Tenho Interesse</button>
+                    <button type="button" class="tenhoInteresse" id="Carro BMW" data-target="#contato">Tenho Interesse</button>
                 </div>
                 <div class="todosOsAnuncios">
                     <img src="Fotos/Itens a venda/Em Destaque/Moto BMW.jpg" id="anuncio2">
                     <h3>Moto BMW</h3>
                     <p>Última em estoque</p>
                     <h3>R$ 50.000,00</h3>
-                    <button type="button" id="tenhoInteresse">Tenho Interesse</button>
+                    <button type="button" class="tenhoInteresse" id="Moto BMW" data-target="#contato">Tenho Interesse</button>
                 </div>
                 <div class="todosOsAnuncios">
                     <img src="Fotos/Itens a venda/Em Destaque/Opala.jpg" id="anuncio3">
                     <h3>Opala</h3>
                     <p>Carro colecionável</p>
                     <h3>R$ 125.000,00</h3>
-                    <button type="button" id="tenhoInteresse">Tenho Interesse</button>
+                    <button type="button" class="tenhoInteresse" id="Opala" data-target="#contato">Tenho Interesse</button>
                 </div>
             </section>
             </div>
@@ -74,24 +82,24 @@
             <div id="destaques">
                 <div class="todosOsAnuncios">
                     <img src="Fotos/Itens a venda/Promoção/Fusca.jpg" id="anuncio4">
-                    <h3>Fuca</h3>
+                    <h3>Fusca</h3>
                     <p>Único dono</p>
                     <h3>R$ 30.000,00</h3>
-                    <button type="button" id="tenhoInteresse">Tenho Interesse</button>
+                    <button type="button" class="tenhoInteresse" id="Fusca" data-target="#contato">Tenho Interesse</button>
                 </div>
                 <div class="todosOsAnuncios">
                     <img src="Fotos/Itens a venda/Promoção/Jeep.jpg" id="anuncio5">
                     <h3>Jeep</h3>
                     <p>Suspensão nova</p>
                     <h3>R$ 60.000,00</h3>
-                    <button type="button" id="tenhoInteresse">Tenho Interesse</button>
+                    <button type="button" class="tenhoInteresse" id="Jeep" data-target="#contato">Tenho Interesse</button>
                 </div>
                 <div class="todosOsAnuncios">
                     <img src="Fotos/Itens a venda/Promoção/Moto Suzuki.jpg" id="anuncio6">
                     <h3>Moto Suzuki</h3>
                     <p>Único dono</p>
                     <h3>R$ 50.000,00</h3>
-                    <button type="button" id="tenhoInteresse">Tenho Interesse</button>
+                    <button type="button" class="tenhoInteresse" id="Moto Suzuki" data-target="#contato">Tenho Interesse</button>
                 </div>
         </section>
         <section id="despedida">
@@ -99,19 +107,21 @@
                 <h2>Entre em Contato</h2>
                 <div id="formNome">
                     Nome:
-                    <input type="text" id="nome" required>
+                    <input type="text" id="nome">
                 </div>
                 <div id="informeTelefone">
                     Telefone:
-                    <input type="tel" id="telefone" required>
+                    <input type="tel" id="telefone">
+                    <p class="necessario">Item necessário!</p>
                 </div>
                 <div id="informeEmail">
                     E-mail:
-                    <input type="email" id="email" required>
+                    <input type="email" id="email">
                 </div>
                 <div id="informeVeiculo">
                     Veículo de Interesse:
-                    <input type="text" id="veiculoDeInteresse" required>
+                    <input type="text" id="veiculoDeInteresse">
+                    <p class="necessario">Item necessário!</p>
                 </div>
                 <div id="mensagem">
                     Mensagem:
@@ -119,15 +129,6 @@
                 </div>
                 <button type="submit" id="enviar">Enviar</button>
             </form>
-            <!--
-            <div class="redessociais">
-                <h2>Redes Sociais</h2>
-                <div class="iconeredes">
-                    <a href="https://www.facebook.com" target="_blank" class="botaofacebook"></a>
-                    <a href="https://www.instagram.com" target="_blank" class="botaoinsta"></a>
-                </div>
-            </div>
-            -->
             <div class="endereçamento">
                 <div class="maps">
                         <h2>Maps</h2>
@@ -140,7 +141,13 @@
             </div>
         </section>
     </main>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <footer>
+        <p>&copy; Felipe Stuginski</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
